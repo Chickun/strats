@@ -20,11 +20,11 @@
 }
 
 .active {
-    background-color: #ff9933;
+    background-color: #00ccff;
 }
  /* Dropdown Button */
 .dropbtn {
-    background-color: #ff9933;
+    background-color: #00ccff;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -65,5 +65,5 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #ff8000;
+    background-color: #00a3cc;
 }
