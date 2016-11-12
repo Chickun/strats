@@ -25,13 +25,13 @@ html{
 }
 
 .active {
-    background-color: #3399ff;
+    background-color: #cc00cc;
 }
 
   /* Dropdown Button */
 
 .dropbtn {
-    background-color: #3399ff;
+    background-color: #cc00cc;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -41,7 +41,7 @@ html{
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #0080ff;
+    background-color: #990099;
 }
 
 /* The container <div> - needed to position the dropdown content */
