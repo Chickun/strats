@@ -7,6 +7,9 @@
 <link rel="stylesheet" href="./css/yellow.css">
 <body>
 <script src="colour.js"></script>
+
+<!--Navbar-->
+
 <div class="icon-bar">
   <a href="./index.html">Or</a>
   <a href="./blue.html">Bl</a>
@@ -14,23 +17,96 @@
   <a href="./blue.html">Pu</a>
   <a href="./green.html">Gr</a>
 </div>
+
+<!--Map Buttons-->
+
 <section class="w3-row-padding w3-center w3-light-grey">
- <div class="dropdown">
-  <button class="dropbtn">Cache</button>
-  <div class="dropdown-content">
-    <a href="./cache/sqflash.jpeg">[A] Squeeky Flash</a>
-    <a href="#">[B] Mid Smoke</a>
-    <a href="#">[B] Sun Execute</a>
-  </div>
+<div class="dropdown">
+  <button onclick='show(1)' class="dropbtn">Cache</button>
 </div>
 <div class="dropdown">
-	  <button class="dropbtn">Mirage</button>
-  <div class="dropdown-content">
-    <a href="#">[B] Mid Execute</a>
-    <a href="#">[B] Rush</a>
-    <a href="#">[B] Mid & Aps</a>
-  </div>
+  <button onclick='show(2)' class="dropbtn">Mirage</button>
+
 </div>
 </section>
+
+<!--Map Tables-->
+
+<div id="table1">
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Strat search...">
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Site</th>
+  </tr>
+  <tr>
+    <td><a href="http://sothatwemaybefree.com/map/de_cache/Flashbang/105/bombsite-a-from-main">Squeeky Flash</a></td>
+    <td>A</td>
+  </tr>
+  <tr>
+    <td>Sun Execute</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>Mid Smoke</td>
+    <td>A</td>
+  </tr>
+</table>
+</div>
+
+<div id="table2">
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Strat search...">
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Site</th>
+  </tr>
+  <tr>
+    <td><a href="http://sothatwemaybefree.com/map/de_mirage/Smoke/385/connector-(stairs-side)-from-top-middle">Mid Execute</a></td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>rush</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>rush</td>
+    <td>A</td>
+  </tr>
+</table>
+</div>
+
+<!--Script-->
+<script>
+window.onload = function(hide) {
+    document.getElementById("table1").style.display="none";
+    document.getElementById("table2").style.display="none";
+};
+function show(nr) {
+    document.getElementById("table1").style.display="none";
+    document.getElementById("table2").style.display="none";
+    document.getElementById("table"+nr).style.display="block";
+}
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
