@@ -22,7 +22,7 @@
 
 <section class="w3-row-padding w3-center w3-light-grey">
 <div class="dropdown">
-  <button onclick='show(1)' class="dropbtn">Cache</button>
+  <button onclick='show(1)'; class="dropbtn">Cache</button>
 </div>
 <div class="dropdown">
   <button onclick='show(2)' class="dropbtn">Mirage</button>
@@ -37,23 +37,23 @@
 <table id="myTable">
   <tr class="header">
     <th style="width:60%;">Name</th>
-    <th style="width:40%;">Site</th>
+    <th style="width:40%;">Desc</th>
   </tr>
   <tr>
-    <td><a href="http://sothatwemaybefree.com/map/de_cache/Flashbang/105/bombsite-a-from-main">Squeeky Flash</a></td>
-    <td>[A]</td>
+    <td><a href="http://sothatwemaybefree.com/map/de_cache/Flashbang/105/bombsite-a-from-main">[A] Squeeky Flash</a></td>
+    <td>Flash when smokes pop. Yellow is also flashing</td>
   </tr>
   <tr>
-    <td><a href="http://sothatwemaybefree.com/map/de_cache/Smoke/41/connector-from-t-spawn">Mid To [A] Execute</a></td>
-    <td>[A]</td>
+    <td><a href="./img/cache/midtoapipesmoke.jpeg">[A] Mid Execute</a></td>
+    <td>Throw smoke when Z smoke pops</td>
   </tr>
   <tr>
-    <td><a href="./img/cache/snakeskullsmoke.jpeg">Smoking Snake</a></td>
-    <td>[A]</td>
+    <td><a href="./img/cache/snakeskullsmoke.jpeg">[A] Smoking Snake</a></td>
+    <td>Throw with Blue & Purple</td>
   </tr>
   <tr>
-    <td><a href="http://sothatwemaybefree.com/map/de_cache/Smoke/336/hell-from-toxic">Sun Execute</a></td>
-    <td>[B]</td>
+    <td><a href="http://sothatwemaybefree.com/map/de_cache/Smoke/336/hell-from-toxic">[B] Sun Execute</a></td>
+    <td>Smoke when everyone is in position</td>
   </tr>
 </table>
 </div>
@@ -90,8 +90,19 @@
 </div>
 </section>
 
+ <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <b>Alert!</b> If you don't have an image it's probably not needed. If an image is VITAL notify Chickun.
+</div>
+
 <!--Script-->
 <script>
+function cache(){
+  document.cookie = "map=cache;path=./cookies";
+}
+function mirage(){
+  document.cookie = "map=mirage;path=./cookies";
+}
 window.onload = function(hide) {
   	document.getElementById("table1").style.display="none";
     document.getElementById("table2").style.display="none";
